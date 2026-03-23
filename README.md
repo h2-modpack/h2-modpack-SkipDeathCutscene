@@ -5,7 +5,7 @@
 ## Features
 
 - Immediately skips the death animation and presentation.
-- Returns you to the House of Hades much more quickly.
+- Returns you to the Crossroads much more quickly.
 
 ## Installation
 
