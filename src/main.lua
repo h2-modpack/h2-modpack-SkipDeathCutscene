@@ -27,7 +27,7 @@ public.definition = {
     tooltip  = "Skip the death cutscene. The death screen will still appear, but you will be immediately returned to the main menu.",
     default  = true,
     dataMutation = false,
-    modpackModule = true,
+    modpack = "h2-modpack",
 }
 
 -- =============================================================================
