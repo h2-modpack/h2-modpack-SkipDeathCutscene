@@ -40,7 +40,7 @@ end
 local function registerHooks()
     modutil.mod.Path.Context.Wrap("DeathPresentation", function()
         modutil.mod.Path.Wrap("wait", function(base, duration, tag, persist)
-            if not lib.isEnabled(config) then
+            if not lib.isEnabled(config, public.definition.modpack) then
                 return base(duration, tag, persist)
             end
             return
@@ -61,8 +61,8 @@ modutil.once_loaded.game(function()
     loader.load(function()
         import_as_fallback(rom.game)
         registerHooks()
-        if lib.isEnabled(config) then apply() end
-        if public.definition.dataMutation and not mods['adamant-Modpack_Core'] then
+        if lib.isEnabled(config, public.definition.modpack) then apply() end
+        if public.definition.dataMutation and not lib.isCoordinated(public.definition.modpack) then
             SetupRunData()
         end
     end)
